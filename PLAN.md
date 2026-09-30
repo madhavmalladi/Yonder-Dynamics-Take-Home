@@ -12,10 +12,10 @@ Working plan for the Yonder Dynamics AI/ML take-home. See `CLAUDE.md` for hard r
 - [ ] Commit setup files (not the dataset or `.env`).
 
 ## 1. Explore the data
-- [ ] Look through a sample of train/valid images: lighting, backgrounds, object scale, angles, occlusion.
-- [ ] Count boxes per class, box size distribution, image brightness/contrast stats.
-- [ ] Check for near-duplicate/augmented images split across train vs. valid (leakage risk — README notes many images are augmented variants of the same source photos). Use perceptual hashing (`imagehash`) if needed.
-- [ ] Write findings into a short script/notebook, commit it.
+- [x] Look through a sample of train/valid images: lighting, backgrounds, object scale, angles, occlusion.
+- [x] Count boxes per class, box size distribution, image brightness/contrast stats.
+- [x] Check for near-duplicate/augmented images split across train vs. valid (leakage risk — README notes many images are augmented variants of the same source photos). Use perceptual hashing (`imagehash`) if needed.
+- [x] Write findings into a short script (`explore_data.py`, output in `outputs/eda/`); commit it.
 - [ ] Decide if the given train/valid split is trustworthy or needs re-splitting; document the decision.
 
 ## 2. Baseline model
