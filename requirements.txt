@@ -2,3 +2,12 @@
 roboflow==1.5.0
 python-dotenv==1.2.3
 PyYAML==6.0.3
+
+# Training / inference
+ultralytics==8.4.170
+torch==2.14.1
+torchvision==0.29.1
+numpy==2.3.5
+opencv-python==5.0.0.93
+pillow==12.3.0
+matplotlib==3.11.2
