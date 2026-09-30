@@ -1,0 +1,24 @@
+[train] images=800 boxes=965 bottle_boxes=534(imgs=429) mallet_boxes=431(imgs=430) imgs_with_both=59
+[valid] images=199 boxes=257 bottle_boxes=151(imgs=110) mallet_boxes=106(imgs=106) imgs_with_both=17
+
+Box size (normalized w*h area) and image brightness, per split/class:
+  train bottle area median=0.014 p10=0.002 p90=0.378
+  train mallet area median=0.013 p10=0.003 p90=0.062
+  train gray mean: mean=113.7 min=0 max=254 | gray std (contrast): mean=52.7 min=1
+        dark images (mean<70): 99  bright (mean>190): 38
+  valid bottle area median=0.011 p10=0.002 p90=0.282
+  valid mallet area median=0.012 p10=0.002 p90=0.056
+  valid gray mean: mean=117.8 min=14 max=240 | gray std (contrast): mean=53.4 min=15
+        dark images (mean<70): 16  bright (mean>190): 12
+
+Leakage check:
+  unique source names: train=800 valid=199
+  source names present in BOTH splits: 0 -> 0/199 valid images share a source with train
+  train sources with >1 image (augmented copies): 0
+  valid images with a train near-duplicate (dHash dist <= 6): 2/199
+  closest 5 pairs: 
+    dist=6  valid=IMG_2788_JPG_jpg.rf.315341c71b2fcf030ba8  train=20231021_174647_jpg.rf.0af649c5a9bec696a
+    dist=6  valid=y2mate_com-The-Worlds-Best-Water-Bottle-  train=y2mate_com-The-Worlds-Best-Water-Bottle-
+    dist=7  valid=20231021_174823_jpg.rf.dc68658d8e3b471c6  train=20231021_174825_jpg.rf.82010e09df294f2b1
+    dist=8  valid=Screenshot-2024-05-28-at-10-03-25-AM_png  train=Screenshot-2024-05-28-at-10-02-26-AM-cop
+    dist=8  valid=snbproduct-449-Edit-copy_jpeg_jpg.rf.41f  train=48oz-WM_Grey_1010x1516_FRONT-copy_jpg.rf
